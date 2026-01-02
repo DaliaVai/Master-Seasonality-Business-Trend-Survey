@@ -164,7 +164,6 @@ all_plots_list <- lapply(industry_order, function(v) {
     
     SA_adjusted = as.numeric(results_industry[[v]]$adjusted_x13),
     
-    # Extract the column 'v' from the reconciled matrix
     Reconciled = as.numeric(reconciled_matrix[, v]),
     
     Series = v
@@ -200,3 +199,4 @@ ggplot(all_plots_long, aes(x = Time, y = Value, color = Type)) +
 
 
 max(abs(diff_matrix))
+
